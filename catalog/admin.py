@@ -7,6 +7,7 @@ class ProductAdmin(admin.ModelAdmin):
 
     def formatted_price(self, obj):
         return "${}".format(obj.price)
+    formatted_price.short_description = 'Price'
 
 class CategoryAdmin(admin.ModelAdmin):
     fields = ('title', 'description', 'url_key', 'status',)
